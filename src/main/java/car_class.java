@@ -9,40 +9,19 @@
  * @author dmosi
  */
 public class car_class {
-	private int speed = 0;
-	private String make = "Chevy";
-	private int modelYear = 2000;
+    public static void main (String [] str)
+	{
+		Car car1 = new Car("Chevy", 2000);
+		for (int i = 1; i <= 5; i++)
+		{
+			car1.accelerate();
+			System.out.println("Current speed is: " + car1.getSpeed());
+		}
+		for (int j = 1; j <= 5; j++)
+		{
+			car1.brake();
+			System.out.println("Current speed is: " + car1.getSpeed());
+		}		
 		
-	public car_class (String n, int Model)
-	{	
-		make = n;
-		modelYear = Model; 
-	}
-	
-	public int getyearModel ()
-	{
-		return modelYear;
-	}
-	
-	public String getMake ()
-	{
-		return make;
-	}
-	
-	public int getSpeed ()
-	{
-		return speed;
-	}	
-		
-	public void accelerate ()
-	{
-		if (speed !=90)
-			speed = speed +5;
-	}
-	
-	public void brake ()
-	{
-		if (speed !=0)
-			speed = speed -5;
 	}
 }
